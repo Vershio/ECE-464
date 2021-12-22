@@ -1,0 +1,1818 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fmodern Consolas;}{\f1\fnil\fcharset129 Courier New;}}
+{\colortbl ;\red20\green20\blue20;\red142\green142\blue142;}
+\viewkind4\uc1\pard\f0\fs20 Warning: Design has unannotated primary inputs. (PWR-414)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Design has unannotated sequential cell outputs. (PWR-415)\cf1\highlight2 
+\par 
+\par \cf0\highlight0 ****************************************\cf1\highlight2 
+\par \cf0\highlight0 Report : power\cf1\highlight2 
+\par \cf0\highlight0         -analysis_effort low\cf1\highlight2 
+\par \cf0\highlight0 Design : MyDesign\cf1\highlight2 
+\par \cf0\highlight0 Version: P-2019.03-SP1\cf1\highlight2 
+\par \cf0\highlight0 Date   : Mon Nov 15 20:21:05 2021\cf1\highlight2 
+\par \cf0\highlight0 ****************************************\cf1\highlight2 
+\par 
+\par 
+\par \cf0\highlight0 Library(s) Used:\cf1\highlight2 
+\par 
+\par \cf0\highlight0     NangateOpenCellLibrary_PDKv1_2_v2008_10_slow_nldm (File: /afs/eos.ncsu.edu/lockers/research/ece/wdavis/tech/nangate/NangateOpenCellLibrary_PDKv1_2_v2008_10/liberty/520/NangateOpenCellLibrary_PDKv1_2_v2008_10_slow_nldm.db)\cf1\highlight2 
+\par 
+\par 
+\par \cf0\highlight0 Operating Conditions: slow   Library: NangateOpenCellLibrary_PDKv1_2_v2008_10_slow_nldm\cf1\highlight2 
+\par \cf0\highlight0 Wire Load Model Mode: top\cf1\highlight2 
+\par 
+\par 
+\par \cf0\highlight0 Global Operating Voltage = 0.95\cf1\highlight2 
+\par \cf0\highlight0 Power-specific unit information :\cf1\highlight2 
+\par \cf0\highlight0     Voltage Units = 1V\cf1\highlight2 
+\par \cf0\highlight0     Capacitance Units = 1.000000pf\cf1\highlight2 
+\par \cf0\highlight0     Time Units = 1ns\cf1\highlight2 
+\par \cf0\highlight0     Dynamic Power Units = 1mW    (derived from V,C,T units)\cf1\highlight2 
+\par \cf0\highlight0     Leakage Power Units = 1pW\cf1\highlight2 
+\par 
+\par 
+\par \cf0\highlight0   Cell Internal Power  =  59.1135 uW   (83%)\cf1\highlight2 
+\par \cf0\highlight0   Net Switching Power  =  11.8655 uW   (17%)\cf1\highlight2 
+\par \cf0\highlight0                          ---------\cf1\highlight2 
+\par \cf0\highlight0 Total Dynamic Power    =  70.9789 uW  (100%)\cf1\highlight2 
+\par 
+\par \cf0\highlight0 Cell Leakage Power     =   2.5543 uW\cf1\highlight2 
+\par 
+\par 
+\par \cf0\highlight0                  Internal         Switching           Leakage            Total\cf1\highlight2 
+\par \cf0\highlight0 Power Group      Power            Power               Power              Power   (   %    )  Attrs\cf1\highlight2 
+\par \cf0\highlight0 --------------------------------------------------------------------------------------------------\cf1\highlight2 
+\par \cf0\highlight0 io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)\cf1\highlight2 
+\par \cf0\highlight0 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)\cf1\highlight2 
+\par \cf0\highlight0 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)\cf1\highlight2 
+\par \cf0\highlight0 clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)\cf1\highlight2 
+\par \cf0\highlight0 register       4.3479e-02        2.5823e-03        3.4836e+05        4.6410e-02  (  63.11%)\cf1\highlight2 
+\par \cf0\highlight0 sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)\cf1\highlight2 
+\par \cf0\highlight0 combinational  1.5635e-02        9.2832e-03        2.2059e+06        2.7124e-02  (  36.89%)\cf1\highlight2 
+\par \cf0\highlight0 --------------------------------------------------------------------------------------------------\cf1\highlight2 
+\par \cf0\highlight0 Total          5.9113e-02 mW     1.1865e-02 mW     2.5543e+06 pW     7.3533e-02 mW\cf1\highlight2 
+\par \cf0\highlight0 1\cf1\highlight2 
+\par \cf0\highlight0 dc_shell> exit\cf1\highlight2 
+\par 
+\par \cf0\highlight0 Thank you...\cf1\highlight2 
+\par \cf0\highlight0 [azheng3@grendel29 synth]$ clear\cf1\highlight2 
+\par \cf0\highlight0 [azheng3@grendel29 synth]$ add synopsys2019\cf1\highlight2 
+\par \cf0\highlight0 Synopsys Suite v2019 (last updated 7/2333/2019)\cf1\highlight2 
+\par \cf0\highlight0 ------------------------\cf1\highlight2 
+\par 
+\par \cf0\highlight0 coreAssembler, coreBuilder, coreConsultant          CoreTools O-2018.09-SP4\cf1\highlight2 
+\par \cf0\highlight0 cscope                                              CosmosScope N-2017.12\cf1\highlight2 
+\par \cf0\highlight0 custom_compiler                                     CustomCompiler O-2018.09-SP1\cf1\highlight2 
+\par \cf0\highlight0 integrator                                          Embedit Integrator O-2019.03-SP2\cf1\highlight2 
+\par \cf0\highlight0 finesim                                             FineSim  O-2018.09-SP2\cf1\highlight2 
+\par \cf0\highlight0 fm_shell -64bit, fm_shell -64bit -gui               Formality P-2019.03-SP2\cf1\highlight2 
+\par \cf0\highlight0 hspice, hspicerf, metaencrypt, converter            Hspice O-2018.09-SP2\cf1\highlight2 
+\par \cf0\highlight0 icc_shell, dcprocheck, dc_pack_design               IC Compiler P-2019.03-SP1\cf1\highlight2 
+\par \cf0\highlight0 icc2_shell                                          IC Compiler2 P-2019.03-SP1\cf1\highlight2 
+\par \cf0\highlight0 lc_shell                                            Library Compiler P-2019.03-SP1\cf1\highlight2 
+\par \cf0\highlight0 pwr_shell, pwr_shell -gui                           PrimePower P-2019.03-SP1\cf1\highlight2 
+\par \cf0\highlight0 pt_shell                                            PrimeTime P-2019.03-SP1\cf1\highlight2 
+\par \cf0\highlight0 raphael, dplot                                      Raphael P-2019.03\cf1\highlight2 
+\par \cf0\highlight0 siliconsmart                                        SiliconSmart ADV O-2018.09-SP2\cf1\highlight2 
+\par \cf0\highlight0 spyglass                                            SpyGlass O-2018.09-SP2\cf1\highlight2 
+\par \cf0\highlight0 grdgenxo, Milkyway, rapid3d, StarXtract, xTractor   StarRC P-2019.03-SP1\cf1\highlight2 
+\par \cf0\highlight0 synplify_pro, identify_instrumentor                 Synplify FPGA P-2019.03\cf1\highlight2 
+\par \cf0\highlight0 identify_debugger                                   Synplify Identify P-2019.03\cf1\highlight2 
+\par \cf0\highlight0 dc_shell, design_vision                             Synthesis Tools P-2019.03-SP1\cf1\highlight2 
+\par \cf0\highlight0 abc, medici, tdevice                                Taurus Medici P-2019.03\cf1\highlight2 
+\par \cf0\highlight0 tsuprem4, tprocess                                  Taurus TSUPREM-4 P-2019.03\cf1\highlight2 
+\par \cf0\highlight0 swb, GENESISe, dessis, floops, svisual, sprocess    TCAD Sentaurus P-2019.03\cf1\highlight2 
+\par \cf0\highlight0 tmax, tmax64                                        TetraMax P-2019.03-SP1\cf1\highlight2 
+\par \cf0\highlight0 vcs, vcs-mx, dve                                    VCS-MX O-2018.09-SP2\cf1\highlight2 
+\par 
+\par \cf0\highlight0 These tools are licensed to NCSU for education and research use\cf1\highlight2 
+\par \cf0\highlight0 only.  Any for-profit and/or commercial use is strictly forbidden.\cf1\highlight2 
+\par \cf0\highlight0 Such use could lead to legal prosecution by Synopsys and/or NCSU.\cf1\highlight2 
+\par 
+\par \cf0\highlight0 Manuals are available by visiting the following Wolftech website:\cf1\highlight2 
+\par \cf0\highlight0 http://www.wolftech.ncsu.edu/manuals/\cf1\highlight2 
+\par 
+\par \cf0\highlight0 Application managed by WolfTech, ecehelp@ncsu.edu\cf1\highlight2 
+\par \cf0\highlight0 Need a Synopsys application not listed? Contact us.\cf1\highlight2 
+\par 
+\par \cf0\highlight0 add.sh: Type exit to return to previous shell instance.\cf1\highlight2 
+\par \cf0\highlight0 [azheng3@grendel29 synth]$ dc_shell\cf1\highlight2 
+\par 
+\par \cf0\highlight0                            Design Compiler Graphical\cf1\highlight2 
+\par \cf0\highlight0                                  DC Ultra (TM)\cf1\highlight2 
+\par \cf0\highlight0                                   DFTMAX (TM)\cf1\highlight2 
+\par \cf0\highlight0                               Power Compiler (TM)\cf1\highlight2 
+\par \cf0\highlight0                                  DesignWare (R)\cf1\highlight2 
+\par \cf0\highlight0                                  DC Expert (TM)\cf1\highlight2 
+\par \cf0\highlight0                                Design Vision (TM)\cf1\highlight2 
+\par \cf0\highlight0                                HDL Compiler (TM)\cf1\highlight2 
+\par \cf0\highlight0                                VHDL Compiler (TM)\cf1\highlight2 
+\par \cf0\highlight0                                   DFT Compiler\cf1\highlight2 
+\par \cf0\highlight0                                Design Compiler(R)\cf1\highlight2 
+\par 
+\par \cf0\highlight0                Version P-2019.03-SP1 for linux64 - Apr 18, 2019\cf1\highlight2 
+\par 
+\par \cf0\highlight0                     Copyright (c) 1988 - 2019 Synopsys, Inc.\cf1\highlight2 
+\par \cf0\highlight0    This software and the associated documentation are proprietary to Synopsys,\cf1\highlight2 
+\par \cf0\highlight0  Inc. This software may only be used in accordance with the terms and conditions\cf1\highlight2 
+\par \cf0\highlight0  of a written license agreement with Synopsys, Inc. All other use, reproduction,\cf1\highlight2 
+\par \cf0\highlight0             or distribution of this software is strictly prohibited.\cf1\highlight2 
+\par \cf0\highlight0 Initializing...\cf1\highlight2 
+\par \cf0\highlight0 Initializing gui preferences from file  /afs/unity.ncsu.edu/users/a/azheng3/.synopsys_dv_prefs.tcl\cf1\highlight2 
+\par \cf0\highlight0 dc_shell> source s\cf1\highlight2 
+\par \cf0\highlight0 script1Project.tcl script2Project.tcl\cf1\highlight2 
+\par \cf0\highlight0 dc_shell> source script1Project.tcl\cf1\highlight2 
+\par \cf0\highlight0 Loading db file '/afs/eos.ncsu.edu/lockers/research/ece/wdavis/tech/nangate/NangateOpenCellLibrary_PDKv1_2_v2008_10/liberty/520/NangateOpenCellLibrary_PDKv1_2_v2008_10_slow_nldm.db'\cf1\highlight2 
+\par \cf0\highlight0 Loading db file '/afs/eos.ncsu.edu/software/synopsys2019/syn/libraries/syn/dw_foundation.sldb'\cf1\highlight2 
+\par \cf0\highlight0 Loading db file '/afs/eos.ncsu.edu/software/synopsys2019/syn/libraries/syn/gtech.db'\cf1\highlight2 
+\par \cf0\highlight0 Loading db file '/afs/eos.ncsu.edu/software/synopsys2019/syn/libraries/syn/standard.sldb'\cf1\highlight2 
+\par \cf0\highlight0   Loading link library 'NangateOpenCellLibrary_PDKv1_2_v2008_10_slow_nldm'\cf1\highlight2 
+\par \cf0\highlight0   Loading link library 'gtech'\cf1\highlight2 
+\par \cf0\highlight0 Loading verilog file '/afs/unity.ncsu.edu/users/a/azheng3/ECE464Project/v/MyDesign.sv'\cf1\highlight2 
+\par \cf0\highlight0 Detecting input file type automatically (-rtl or -netlist).\cf1\highlight2 
+\par \cf0\highlight0 Reading with Presto HDL Compiler (equivalent to -rtl option).\cf1\highlight2 
+\par \cf0\highlight0 Running PRESTO HDLC\cf1\highlight2 
+\par \cf0\highlight0 Compiling source file /afs/unity.ncsu.edu/users/a/azheng3/ECE464Project/v/MyDesign.sv\cf1\highlight2 
+\par 
+\par \cf0\highlight0 Statistics for case statements in always block at line 48 in file\cf1\highlight2 
+\par \cf0\highlight0         '/afs/unity.ncsu.edu/users/a/azheng3/ECE464Project/v/MyDesign.sv'\cf1\highlight2 
+\par \cf0\highlight0 ===============================================\cf1\highlight2 
+\par \cf0\highlight0 |           Line           |  full/ parallel  |\cf1\highlight2 
+\par \cf0\highlight0 ===============================================\cf1\highlight2 
+\par \cf0\highlight0 |            66            |    auto/auto     |\cf1\highlight2 
+\par \cf0\highlight0 ===============================================\cf1\highlight2 
+\par 
+\par \cf0\highlight0 Inferred memory devices in process\cf1\highlight2 
+\par \cf0\highlight0         in routine MyDesign line 48 in file\cf1\highlight2 
+\par \cf0\highlight0                 '/afs/unity.ncsu.edu/users/a/azheng3/ECE464Project/v/MyDesign.sv'.\cf1\highlight2 
+\par \cf0\highlight0 ======================================================================================\cf1\highlight2 
+\par \cf0\highlight0 |       Register Name        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |\cf1\highlight2 
+\par \cf0\highlight0 ======================================================================================\cf1\highlight2 
+\par \cf0\highlight0 | dut_sram_read_address_reg  | Flip-flop |  12   |  Y  | N  | N  | N  | N  | N  | N  |\cf1\highlight2 
+\par \cf0\highlight0 |      convolution0_reg      | Flip-flop |   9   |  Y  | N  | N  | N  | N  | N  | N  |\cf1\highlight2 
+\par \cf0\highlight0 | dut_wmem_read_address_reg  | Flip-flop |  12   |  Y  | N  | N  | N  | N  | N  | N  |\cf1\highlight2 
+\par \cf0\highlight0 |      convolution1_reg      | Flip-flop |   9   |  Y  | N  | N  | N  | N  | N  | N  |\cf1\highlight2 
+\par \cf0\highlight0 |      convolution3_reg      | Flip-flop |   9   |  Y  | N  | N  | N  | N  | N  | N  |\cf1\highlight2 
+\par \cf0\highlight0 |      convolution2_reg      | Flip-flop |   9   |  Y  | N  | N  | N  | N  | N  | N  |\cf1\highlight2 
+\par \cf0\highlight0 | dut_sram_write_address_reg | Flip-flop |  12   |  Y  | N  | N  | N  | N  | N  | N  |\cf1\highlight2 
+\par \cf0\highlight0 |  dut_sram_write_data_reg   | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |\cf1\highlight2 
+\par \cf0\highlight0 |         state_reg          | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |\cf1\highlight2 
+\par \cf0\highlight0 |        dut_busy_reg        | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |\cf1\highlight2 
+\par \cf0\highlight0 | dut_sram_write_enable_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |\cf1\highlight2 
+\par \cf0\highlight0 ======================================================================================\cf1\highlight2 
+\par \cf0\highlight0 Presto compilation completed successfully.\cf1\highlight2 
+\par \cf0\highlight0 Current design is now '/afs/unity.ncsu.edu/users/a/azheng3/ECE464Project/v/MyDesign.db:MyDesign'\cf1\highlight2 
+\par \cf0\highlight0 Loaded 1 design.\cf1\highlight2 
+\par \cf0\highlight0 Current design is 'MyDesign'.\cf1\highlight2 
+\par \cf0\highlight0 Current design is 'MyDesign'.\cf1\highlight2 
+\par \cf0\highlight0 Warning: Design rule attributes from the driving cell will be\cf1\highlight2 
+\par \cf0\highlight0         set on the port. (UID-401)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Design rule attributes from the driving cell will be\cf1\highlight2 
+\par \cf0\highlight0         set on the port. (UID-401)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Design rule attributes from the driving cell will be\cf1\highlight2 
+\par \cf0\highlight0         set on the port. (UID-401)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Design rule attributes from the driving cell will be\cf1\highlight2 
+\par \cf0\highlight0         set on the port. (UID-401)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Design rule attributes from the driving cell will be\cf1\highlight2 
+\par \cf0\highlight0         set on the port. (UID-401)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Design rule attributes from the driving cell will be\cf1\highlight2 
+\par \cf0\highlight0         set on the port. (UID-401)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Design rule attributes from the driving cell will be\cf1\highlight2 
+\par \cf0\highlight0         set on the port. (UID-401)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Design rule attributes from the driving cell will be\cf1\highlight2 
+\par \cf0\highlight0         set on the port. (UID-401)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Design rule attributes from the driving cell will be\cf1\highlight2 
+\par \cf0\highlight0         set on the port. (UID-401)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Design rule attributes from the driving cell will be\cf1\highlight2 
+\par \cf0\highlight0         set on the port. (UID-401)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Design rule attributes from the driving cell will be\cf1\highlight2 
+\par \cf0\highlight0         set on the port. (UID-401)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Design rule attributes from the driving cell will be\cf1\highlight2 
+\par \cf0\highlight0         set on the port. (UID-401)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Design rule attributes from the driving cell will be\cf1\highlight2 
+\par \cf0\highlight0         set on the port. (UID-401)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Design rule attributes from the driving cell will be\cf1\highlight2 
+\par \cf0\highlight0         set on the port. (UID-401)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Design rule attributes from the driving cell will be\cf1\highlight2 
+\par \cf0\highlight0         set on the port. (UID-401)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Design rule attributes from the driving cell will be\cf1\highlight2 
+\par \cf0\highlight0         set on the port. (UID-401)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Design rule attributes from the driving cell will be\cf1\highlight2 
+\par \cf0\highlight0         set on the port. (UID-401)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Design rule attributes from the driving cell will be\cf1\highlight2 
+\par \cf0\highlight0         set on the port. (UID-401)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Design rule attributes from the driving cell will be\cf1\highlight2 
+\par \cf0\highlight0         set on the port. (UID-401)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Design rule attributes from the driving cell will be\cf1\highlight2 
+\par \cf0\highlight0         set on the port. (UID-401)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Design rule attributes from the driving cell will be\cf1\highlight2 
+\par \cf0\highlight0         set on the port. (UID-401)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Design rule attributes from the driving cell will be\cf1\highlight2 
+\par \cf0\highlight0         set on the port. (UID-401)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Design rule attributes from the driving cell will be\cf1\highlight2 
+\par \cf0\highlight0         set on the port. (UID-401)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Design rule attributes from the driving cell will be\cf1\highlight2 
+\par \cf0\highlight0         set on the port. (UID-401)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Design rule attributes from the driving cell will be\cf1\highlight2 
+\par \cf0\highlight0         set on the port. (UID-401)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Design rule attributes from the driving cell will be\cf1\highlight2 
+\par \cf0\highlight0         set on the port. (UID-401)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Design rule attributes from the driving cell will be\cf1\highlight2 
+\par \cf0\highlight0         set on the port. (UID-401)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Design rule attributes from the driving cell will be\cf1\highlight2 
+\par \cf0\highlight0         set on the port. (UID-401)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Design rule attributes from the driving cell will be\cf1\highlight2 
+\par \cf0\highlight0         set on the port. (UID-401)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Design rule attributes from the driving cell will be\cf1\highlight2 
+\par \cf0\highlight0         set on the port. (UID-401)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Design rule attributes from the driving cell will be\cf1\highlight2 
+\par \cf0\highlight0         set on the port. (UID-401)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Design rule attributes from the driving cell will be\cf1\highlight2 
+\par \cf0\highlight0         set on the port. (UID-401)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Design rule attributes from the driving cell will be\cf1\highlight2 
+\par \cf0\highlight0         set on the port. (UID-401)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Design rule attributes from the driving cell will be\cf1\highlight2 
+\par \cf0\highlight0         set on the port. (UID-401)\cf1\highlight2 
+\par 
+\par \cf0\highlight0 ****************************************\cf1\highlight2 
+\par \cf0\highlight0 check_design summary:\cf1\highlight2 
+\par \cf0\highlight0 Version:     P-2019.03-SP1\cf1\highlight2 
+\par \cf0\highlight0 Date:        Mon Nov 15 20:22:16 2021\cf1\highlight2 
+\par \cf0\highlight0 ****************************************\cf1\highlight2 
+\par 
+\par \cf0\highlight0                    Name                                            Total\cf1\highlight2 
+\par \cf0\highlight0 --------------------------------------------------------------------------------\cf1\highlight2 
+\par \cf0\highlight0 Inputs/Outputs                                                      7\cf1\highlight2 
+\par \cf0\highlight0     Unconnected ports (LINT-28)                                     7\cf1\highlight2 
+\par 
+\par \cf0\highlight0 Cells                                                              33\cf1\highlight2 
+\par \cf0\highlight0     Cells do not drive (LINT-1)                                    33\cf1\highlight2 
+\par \cf0\highlight0 --------------------------------------------------------------------------------\cf1\highlight2 
+\par 
+\par \cf0\highlight0 Warning: In design 'MyDesign', cell 'C993' does not drive any nets. (LINT-1)\cf1\highlight2 
+\par \cf0\highlight0 Warning: In design 'MyDesign', cell 'B_41' does not drive any nets. (LINT-1)\cf1\highlight2 
+\par \cf0\highlight0 Warning: In design 'MyDesign', cell 'B_42' does not drive any nets. (LINT-1)\cf1\highlight2 
+\par \cf0\highlight0 Warning: In design 'MyDesign', cell 'B_43' does not drive any nets. (LINT-1)\cf1\highlight2 
+\par \cf0\highlight0 Warning: In design 'MyDesign', cell 'B_44' does not drive any nets. (LINT-1)\cf1\highlight2 
+\par \cf0\highlight0 Warning: In design 'MyDesign', cell 'C1100' does not drive any nets. (LINT-1)\cf1\highlight2 
+\par \cf0\highlight0 Warning: In design 'MyDesign', cell 'C1101' does not drive any nets. (LINT-1)\cf1\highlight2 
+\par \cf0\highlight0 Warning: In design 'MyDesign', cell 'C1102' does not drive any nets. (LINT-1)\cf1\highlight2 
+\par \cf0\highlight0 Warning: In design 'MyDesign', cell 'C1103' does not drive any nets. (LINT-1)\cf1\highlight2 
+\par \cf0\highlight0 Warning: In design 'MyDesign', cell 'C1104' does not drive any nets. (LINT-1)\cf1\highlight2 
+\par \cf0\highlight0 Warning: In design 'MyDesign', cell 'C1105' does not drive any nets. (LINT-1)\cf1\highlight2 
+\par \cf0\highlight0 Warning: In design 'MyDesign', cell 'C1106' does not drive any nets. (LINT-1)\cf1\highlight2 
+\par \cf0\highlight0 Warning: In design 'MyDesign', cell 'C1107' does not drive any nets. (LINT-1)\cf1\highlight2 
+\par \cf0\highlight0 Warning: In design 'MyDesign', cell 'C1108' does not drive any nets. (LINT-1)\cf1\highlight2 
+\par \cf0\highlight0 Warning: In design 'MyDesign', cell 'C1109' does not drive any nets. (LINT-1)\cf1\highlight2 
+\par \cf0\highlight0 Warning: In design 'MyDesign', cell 'C1110' does not drive any nets. (LINT-1)\cf1\highlight2 
+\par \cf0\highlight0 Warning: In design 'MyDesign', cell 'C1111' does not drive any nets. (LINT-1)\cf1\highlight2 
+\par \cf0\highlight0 Warning: In design 'MyDesign', cell 'C1112' does not drive any nets. (LINT-1)\cf1\highlight2 
+\par \cf0\highlight0 Warning: In design 'MyDesign', cell 'C1113' does not drive any nets. (LINT-1)\cf1\highlight2 
+\par \cf0\highlight0 Warning: In design 'MyDesign', cell 'C1114' does not drive any nets. (LINT-1)\cf1\highlight2 
+\par \cf0\highlight0 Warning: In design 'MyDesign', cell 'C1115' does not drive any nets. (LINT-1)\cf1\highlight2 
+\par \cf0\highlight0 Warning: In design 'MyDesign', cell 'C1116' does not drive any nets. (LINT-1)\cf1\highlight2 
+\par \cf0\highlight0 Warning: In design 'MyDesign', cell 'C1117' does not drive any nets. (LINT-1)\cf1\highlight2 
+\par \cf0\highlight0 Warning: In design 'MyDesign', cell 'C1118' does not drive any nets. (LINT-1)\cf1\highlight2 
+\par \cf0\highlight0 Warning: In design 'MyDesign', cell 'C1119' does not drive any nets. (LINT-1)\cf1\highlight2 
+\par \cf0\highlight0 Warning: In design 'MyDesign', cell 'C1120' does not drive any nets. (LINT-1)\cf1\highlight2 
+\par \cf0\highlight0 Warning: In design 'MyDesign', cell 'C1121' does not drive any nets. (LINT-1)\cf1\highlight2 
+\par \cf0\highlight0 Warning: In design 'MyDesign', cell 'C1122' does not drive any nets. (LINT-1)\cf1\highlight2 
+\par \cf0\highlight0 Warning: In design 'MyDesign', cell 'C1123' does not drive any nets. (LINT-1)\cf1\highlight2 
+\par \cf0\highlight0 Warning: In design 'MyDesign', cell 'C1124' does not drive any nets. (LINT-1)\cf1\highlight2 
+\par \cf0\highlight0 Warning: In design 'MyDesign', cell 'C1125' does not drive any nets. (LINT-1)\cf1\highlight2 
+\par \cf0\highlight0 Warning: In design 'MyDesign', cell 'C1126' does not drive any nets. (LINT-1)\cf1\highlight2 
+\par \cf0\highlight0 Warning: In design 'MyDesign', cell 'C1127' does not drive any nets. (LINT-1)\cf1\highlight2 
+\par \cf0\highlight0 Warning: In design 'MyDesign', port 'wmem_dut_read_data[15]' is not connected to any nets. (LINT-28)\cf1\highlight2 
+\par \cf0\highlight0 Warning: In design 'MyDesign', port 'wmem_dut_read_data[14]' is not connected to any nets. (LINT-28)\cf1\highlight2 
+\par \cf0\highlight0 Warning: In design 'MyDesign', port 'wmem_dut_read_data[13]' is not connected to any nets. (LINT-28)\cf1\highlight2 
+\par \cf0\highlight0 Warning: In design 'MyDesign', port 'wmem_dut_read_data[12]' is not connected to any nets. (LINT-28)\cf1\highlight2 
+\par \cf0\highlight0 Warning: In design 'MyDesign', port 'wmem_dut_read_data[11]' is not connected to any nets. (LINT-28)\cf1\highlight2 
+\par \cf0\highlight0 Warning: In design 'MyDesign', port 'wmem_dut_read_data[10]' is not connected to any nets. (LINT-28)\cf1\highlight2 
+\par \cf0\highlight0 Warning: In design 'MyDesign', port 'wmem_dut_read_data[9]' is not connected to any nets. (LINT-28)\cf1\highlight2 
+\par 
+\par \cf0\highlight0   Linking design 'MyDesign'\cf1\highlight2 
+\par \cf0\highlight0   Using the following designs and libraries:\cf1\highlight2 
+\par \cf0\highlight0   --------------------------------------------------------------------------\cf1\highlight2 
+\par \cf0\highlight0   NangateOpenCellLibrary_PDKv1_2_v2008_10_slow_nldm (library)\cf1\highlight2 
+\par \cf0\highlight0                               /afs/eos.ncsu.edu/lockers/research/ece/wdavis/tech/nangate/NangateOpenCellLibrary_PDKv1_2_v2008_10/liberty/520/NangateOpenCellLibrary_PDKv1_2_v2008_10_slow_nldm.db\cf1\highlight2 
+\par \cf0\highlight0   dw_foundation.sldb (library)\cf1\highlight2 
+\par \cf0\highlight0                               /afs/eos.ncsu.edu/software/synopsys2019/syn/libraries/syn/dw_foundation.sldb\cf1\highlight2 
+\par 
+\par \cf0\highlight0 Information: Performing power optimization. (PWR-850)\cf1\highlight2 
+\par \cf0\highlight0 Alib files are up-to-date.\cf1\highlight2 
+\par \cf0\highlight0 Information: Evaluating DesignWare library utilization. (UISN-27)\cf1\highlight2 
+\par 
+\par \cf0\highlight0 ============================================================================\cf1\highlight2 
+\par \cf0\highlight0 | DesignWare Building Block Library  |         Version         | Available |\cf1\highlight2 
+\par \cf0\highlight0 ============================================================================\cf1\highlight2 
+\par \cf0\highlight0 | Basic DW Building Blocks           | P-2019.03-DWBB_201903.1 |     *     |\cf1\highlight2 
+\par \cf0\highlight0 | Licensed DW Building Blocks        | P-2019.03-DWBB_201903.1 |     *     |\cf1\highlight2 
+\par \cf0\highlight0 ============================================================================\cf1\highlight2 
+\par 
+\par \cf0\highlight0 Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)\cf1\highlight2 
+\par 
+\par \cf0\highlight0 Information: There are 40 potential problems in your design. Please run 'check_design' for more information. (LINT-99)\cf1\highlight2 
+\par 
+\par \cf0\highlight0   Simplifying Design 'MyDesign'\cf1\highlight2 
+\par 
+\par \cf0\highlight0 Loaded alib file './alib-52/NangateOpenCellLibrary_PDKv1_2_v2008_10_slow_nldm.db.alib'\cf1\highlight2 
+\par \cf0\highlight0   Building model 'DW01_NAND2'\cf1\highlight2 
+\par \cf0\highlight0 Information: Ungrouping 0 of 1 hierarchies before Pass 1 (OPT-775)\cf1\highlight2 
+\par \cf0\highlight0 Information: State dependent leakage is now switched from on to off.\cf1\highlight2 
+\par 
+\par \cf0\highlight0   Beginning Pass 1 Mapping\cf1\highlight2 
+\par \cf0\highlight0   ------------------------\cf1\highlight2 
+\par \cf0\highlight0   Processing 'MyDesign'\cf1\highlight2 
+\par \cf0\highlight0 Information: Added key list 'DesignWare' to design 'MyDesign'. (DDB-72)\cf1\highlight2 
+\par \cf0\highlight0 Information: The register 'dut_sram_write_data_reg[4]' is a constant and will be removed. (OPT-1206)\cf1\highlight2 
+\par \cf0\highlight0 Information: The register 'dut_sram_write_data_reg[5]' is a constant and will be removed. (OPT-1206)\cf1\highlight2 
+\par \cf0\highlight0 Information: The register 'dut_sram_write_data_reg[6]' is a constant and will be removed. (OPT-1206)\cf1\highlight2 
+\par \cf0\highlight0 Information: The register 'dut_sram_write_data_reg[7]' is a constant and will be removed. (OPT-1206)\cf1\highlight2 
+\par \cf0\highlight0 Information: The register 'dut_sram_write_data_reg[8]' is a constant and will be removed. (OPT-1206)\cf1\highlight2 
+\par \cf0\highlight0 Information: The register 'dut_sram_write_data_reg[9]' is a constant and will be removed. (OPT-1206)\cf1\highlight2 
+\par \cf0\highlight0 Information: The register 'dut_sram_write_data_reg[10]' is a constant and will be removed. (OPT-1206)\cf1\highlight2 
+\par \cf0\highlight0 Information: The register 'dut_sram_write_data_reg[11]' is a constant and will be removed. (OPT-1206)\cf1\highlight2 
+\par \cf0\highlight0 Information: The register 'dut_sram_write_data_reg[12]' is a constant and will be removed. (OPT-1206)\cf1\highlight2 
+\par \cf0\highlight0 Information: The register 'dut_sram_write_data_reg[13]' is a constant and will be removed. (OPT-1206)\cf1\highlight2 
+\par \cf0\highlight0 Information: The register 'dut_sram_write_data_reg[14]' is a constant and will be removed. (OPT-1206)\cf1\highlight2 
+\par \cf0\highlight0 Information: The register 'dut_sram_write_data_reg[15]' is a constant and will be removed. (OPT-1206)\cf1\highlight2 
+\par \cf0\highlight0 Information: The register 'dut_wmem_read_address_reg[0]' is a constant and will be removed. (OPT-1206)\cf1\highlight2 
+\par \cf0\highlight0 Information: The register 'dut_wmem_read_address_reg[1]' is a constant and will be removed. (OPT-1206)\cf1\highlight2 
+\par \cf0\highlight0 Information: The register 'dut_wmem_read_address_reg[2]' is a constant and will be removed. (OPT-1206)\cf1\highlight2 
+\par \cf0\highlight0 Information: The register 'dut_wmem_read_address_reg[3]' is a constant and will be removed. (OPT-1206)\cf1\highlight2 
+\par \cf0\highlight0 Information: The register 'dut_wmem_read_address_reg[4]' is a constant and will be removed. (OPT-1206)\cf1\highlight2 
+\par \cf0\highlight0 Information: The register 'dut_wmem_read_address_reg[5]' is a constant and will be removed. (OPT-1206)\cf1\highlight2 
+\par \cf0\highlight0 Information: The register 'dut_wmem_read_address_reg[6]' is a constant and will be removed. (OPT-1206)\cf1\highlight2 
+\par \cf0\highlight0 Information: The register 'dut_wmem_read_address_reg[7]' is a constant and will be removed. (OPT-1206)\cf1\highlight2 
+\par \cf0\highlight0 Information: The register 'dut_wmem_read_address_reg[8]' is a constant and will be removed. (OPT-1206)\cf1\highlight2 
+\par \cf0\highlight0 Information: The register 'dut_wmem_read_address_reg[9]' is a constant and will be removed. (OPT-1206)\cf1\highlight2 
+\par \cf0\highlight0 Information: The register 'dut_wmem_read_address_reg[10]' is a constant and will be removed. (OPT-1206)\cf1\highlight2 
+\par \cf0\highlight0 Information: The register 'dut_wmem_read_address_reg[11]' is a constant and will be removed. (OPT-1206)\cf1\highlight2 
+\par \cf0\highlight0 Information: The register 'dut_sram_read_address_reg[0]' is a constant and will be removed. (OPT-1206)\cf1\highlight2 
+\par \cf0\highlight0 Information: The register 'dut_sram_read_address_reg[1]' is a constant and will be removed. (OPT-1206)\cf1\highlight2 
+\par \cf0\highlight0 Information: The register 'dut_sram_read_address_reg[2]' is a constant and will be removed. (OPT-1206)\cf1\highlight2 
+\par \cf0\highlight0 Information: The register 'dut_sram_read_address_reg[3]' is a constant and will be removed. (OPT-1206)\cf1\highlight2 
+\par \cf0\highlight0 Information: The register 'dut_sram_read_address_reg[4]' is a constant and will be removed. (OPT-1206)\cf1\highlight2 
+\par \cf0\highlight0 Information: The register 'dut_sram_read_address_reg[5]' is a constant and will be removed. (OPT-1206)\cf1\highlight2 
+\par \cf0\highlight0 Information: The register 'dut_sram_read_address_reg[6]' is a constant and will be removed. (OPT-1206)\cf1\highlight2 
+\par \cf0\highlight0 Information: The register 'dut_sram_read_address_reg[7]' is a constant and will be removed. (OPT-1206)\cf1\highlight2 
+\par \cf0\highlight0 Information: The register 'dut_sram_read_address_reg[8]' is a constant and will be removed. (OPT-1206)\cf1\highlight2 
+\par \cf0\highlight0 Information: The register 'dut_sram_read_address_reg[9]' is a constant and will be removed. (OPT-1206)\cf1\highlight2 
+\par \cf0\highlight0 Information: The register 'dut_sram_read_address_reg[10]' is a constant and will be removed. (OPT-1206)\cf1\highlight2 
+\par \cf0\highlight0 Information: The register 'dut_sram_read_address_reg[11]' is a constant and will be removed. (OPT-1206)\cf1\highlight2 
+\par \cf0\highlight0 Information: In design 'MyDesign', the register 'dut_sram_write_address_reg[2]' is removed because it is merged to 'dut_sram_write_address_reg[1]'. (OPT-1215)\cf1\highlight2 
+\par \cf0\highlight0 Information: In design 'MyDesign', the register 'dut_sram_write_address_reg[3]' is removed because it is merged to 'dut_sram_write_address_reg[1]'. (OPT-1215)\cf1\highlight2 
+\par \cf0\highlight0 Information: In design 'MyDesign', the register 'dut_sram_write_address_reg[4]' is removed because it is merged to 'dut_sram_write_address_reg[1]'. (OPT-1215)\cf1\highlight2 
+\par \cf0\highlight0 Information: In design 'MyDesign', the register 'dut_sram_write_address_reg[5]' is removed because it is merged to 'dut_sram_write_address_reg[1]'. (OPT-1215)\cf1\highlight2 
+\par \cf0\highlight0 Information: In design 'MyDesign', the register 'dut_sram_write_address_reg[6]' is removed because it is merged to 'dut_sram_write_address_reg[1]'. (OPT-1215)\cf1\highlight2 
+\par \cf0\highlight0 Information: In design 'MyDesign', the register 'dut_sram_write_address_reg[7]' is removed because it is merged to 'dut_sram_write_address_reg[1]'. (OPT-1215)\cf1\highlight2 
+\par \cf0\highlight0 Information: In design 'MyDesign', the register 'dut_sram_write_address_reg[8]' is removed because it is merged to 'dut_sram_write_address_reg[1]'. (OPT-1215)\cf1\highlight2 
+\par \cf0\highlight0 Information: In design 'MyDesign', the register 'dut_sram_write_address_reg[9]' is removed because it is merged to 'dut_sram_write_address_reg[1]'. (OPT-1215)\cf1\highlight2 
+\par \cf0\highlight0 Information: In design 'MyDesign', the register 'dut_sram_write_address_reg[10]' is removed because it is merged to 'dut_sram_write_address_reg[1]'. (OPT-1215)\cf1\highlight2 
+\par \cf0\highlight0 Information: In design 'MyDesign', the register 'dut_sram_write_address_reg[11]' is removed because it is merged to 'dut_sram_write_address_reg[1]'. (OPT-1215)\cf1\highlight2 
+\par \cf0\highlight0 Information: In design 'MyDesign', the register 'dut_sram_write_address_reg[0]' is removed because it is merged to 'dut_sram_write_address_reg[1]'. (OPT-1215)\cf1\highlight2 
+\par \cf0\highlight0  Implement Synthetic for 'MyDesign'.\cf1\highlight2 
+\par 
+\par \cf0\highlight0   Updating timing information\cf1\highlight2 
+\par \cf0\highlight0 Information: Updating design information... (UID-85)\cf1\highlight2 
+\par \cf0\highlight0 Information: The register 'dut_sram_write_address_reg[1]' is a constant and will be removed. (OPT-1206)\cf1\highlight2 
+\par 
+\par \cf0\highlight0   Beginning Mapping Optimizations  (Ultra High effort)\cf1\highlight2 
+\par \cf0\highlight0   -------------------------------\cf1\highlight2 
+\par \cf0\highlight0   Mapping Optimization (Phase 1)\cf1\highlight2 
+\par \cf0\highlight0   Mapping Optimization (Phase 2)\cf1\highlight2 
+\par \cf0\highlight0   Mapping Optimization (Phase 3)\cf1\highlight2 
+\par \cf0\highlight0   Mapping Optimization (Phase 4)\cf1\highlight2 
+\par \cf0\highlight0   Mapping Optimization (Phase 5)\cf1\highlight2 
+\par \cf0\highlight0   Mapping Optimization (Phase 6)\cf1\highlight2 
+\par 
+\par \cf0\highlight0   Beginning Constant Register Removal\cf1\highlight2 
+\par \cf0\highlight0   -----------------------------------\cf1\highlight2 
+\par 
+\par \cf0\highlight0   Beginning Global Optimizations\cf1\highlight2 
+\par \cf0\highlight0   ------------------------------\cf1\highlight2 
+\par \cf0\highlight0   Numerical Synthesis (Phase 1)\cf1\highlight2 
+\par \cf0\highlight0   Numerical Synthesis (Phase 2)\cf1\highlight2 
+\par \cf0\highlight0   Global Optimization (Phase 1)\cf1\highlight2 
+\par \cf0\highlight0   Global Optimization (Phase 2)\cf1\highlight2 
+\par \cf0\highlight0   Global Optimization (Phase 3)\cf1\highlight2 
+\par \cf0\highlight0   Global Optimization (Phase 4)\cf1\highlight2 
+\par \cf0\highlight0   Global Optimization (Phase 5)\cf1\highlight2 
+\par \cf0\highlight0   Global Optimization (Phase 6)\cf1\highlight2 
+\par \cf0\highlight0   Global Optimization (Phase 7)\cf1\highlight2 
+\par \cf0\highlight0   Global Optimization (Phase 8)\cf1\highlight2 
+\par \cf0\highlight0   Global Optimization (Phase 9)\cf1\highlight2 
+\par \cf0\highlight0   Global Optimization (Phase 10)\cf1\highlight2 
+\par \cf0\highlight0   Global Optimization (Phase 11)\cf1\highlight2 
+\par \cf0\highlight0   Global Optimization (Phase 12)\cf1\highlight2 
+\par \cf0\highlight0   Global Optimization (Phase 13)\cf1\highlight2 
+\par \cf0\highlight0   Global Optimization (Phase 14)\cf1\highlight2 
+\par \cf0\highlight0   Global Optimization (Phase 15)\cf1\highlight2 
+\par \cf0\highlight0   Global Optimization (Phase 16)\cf1\highlight2 
+\par \cf0\highlight0   Global Optimization (Phase 17)\cf1\highlight2 
+\par \cf0\highlight0   Global Optimization (Phase 18)\cf1\highlight2 
+\par \cf0\highlight0   Global Optimization (Phase 19)\cf1\highlight2 
+\par \cf0\highlight0   Global Optimization (Phase 20)\cf1\highlight2 
+\par \cf0\highlight0   Global Optimization (Phase 21)\cf1\highlight2 
+\par \cf0\highlight0   Global Optimization (Phase 22)\cf1\highlight2 
+\par \cf0\highlight0   Global Optimization (Phase 23)\cf1\highlight2 
+\par \cf0\highlight0   Global Optimization (Phase 24)\cf1\highlight2 
+\par \cf0\highlight0   Global Optimization (Phase 25)\cf1\highlight2 
+\par \cf0\highlight0   Global Optimization (Phase 26)\cf1\highlight2 
+\par \cf0\highlight0   Global Optimization (Phase 27)\cf1\highlight2 
+\par \cf0\highlight0   Global Optimization (Phase 28)\cf1\highlight2 
+\par \cf0\highlight0   Global Optimization (Phase 29)\cf1\highlight2 
+\par \cf0\highlight0   Global Optimization (Phase 30)\cf1\highlight2 
+\par 
+\par \cf0\highlight0   Beginning Isolate Ports\cf1\highlight2 
+\par \cf0\highlight0   -----------------------\cf1\highlight2 
+\par 
+\par \cf0\highlight0   Beginning Delay Optimization\cf1\highlight2 
+\par \cf0\highlight0   ----------------------------\cf1\highlight2 
+\par 
+\par \cf0\highlight0                                   TOTAL\cf1\highlight2 
+\par \cf0\highlight0    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE\cf1\highlight2 
+\par \cf0\highlight0     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER\cf1\highlight2 
+\par \cf0\highlight0   --------- --------- --------- --------- --------- ------------------------- ---------\cf1\highlight2 
+\par \cf0\highlight0     0:00:06     539.4      0.75      10.2       0.0                           2819202.7500\cf1\highlight2 
+\par \cf0\highlight0     0:00:06     591.3      0.15       4.6       0.0                           3884499.7500\cf1\highlight2 
+\par \cf0\highlight0     0:00:06     591.3      0.15       4.6       0.0                           3884499.7500\cf1\highlight2 
+\par \cf0\highlight0     0:00:06     591.3      0.15       4.6       0.0                           3891464.7500\cf1\highlight2 
+\par 
+\par \cf0\highlight0   Beginning WLM Backend Optimization\cf1\highlight2 
+\par \cf0\highlight0   --------------------------------------\cf1\highlight2 
+\par \cf0\highlight0     0:00:07     558.9      0.16       4.4       0.0                           3261295.5000\cf1\highlight2 
+\par \cf0\highlight0     0:00:07     558.9      0.16       4.4       0.0                           3198654.0000\cf1\highlight2 
+\par \cf0\highlight0     0:00:07     558.9      0.16       4.4       0.0                           3198654.0000\cf1\highlight2 
+\par \cf0\highlight0     0:00:07     588.1      0.11       2.4       0.0                           3605199.0000\cf1\highlight2 
+\par \cf0\highlight0     0:00:07     588.1      0.11       2.4       0.0                           3605199.0000\cf1\highlight2 
+\par \cf0\highlight0     0:00:07     588.1      0.11       2.4       0.0                           3605199.0000\cf1\highlight2 
+\par \cf0\highlight0     0:00:07     588.1      0.11       2.4       0.0                           3605199.0000\cf1\highlight2 
+\par \cf0\highlight0     0:00:09     609.7      0.00       0.0       0.0                           4012032.0000\cf1\highlight2 
+\par \cf0\highlight0     0:00:09     609.7      0.00       0.0       0.0                           4012032.0000\cf1\highlight2 
+\par \cf0\highlight0     0:00:09     609.7      0.00       0.0       0.0                           4012032.0000\cf1\highlight2 
+\par \cf0\highlight0     0:00:09     609.7      0.00       0.0       0.0                           4012032.0000\cf1\highlight2 
+\par \cf0\highlight0     0:00:09     609.7      0.00       0.0       0.0                           4012032.0000\cf1\highlight2 
+\par \cf0\highlight0     0:00:09     609.7      0.00       0.0       0.0                           4012032.0000\cf1\highlight2 
+\par \cf0\highlight0     0:00:09     609.7      0.00       0.0       0.0                           4012032.0000\cf1\highlight2 
+\par \cf0\highlight0     0:00:09     609.7      0.00       0.0       0.0                           4012032.0000\cf1\highlight2 
+\par \cf0\highlight0     0:00:09     609.7      0.00       0.0       0.0                           4012032.0000\cf1\highlight2 
+\par \cf0\highlight0     0:00:09     609.7      0.00       0.0       0.0                           4012032.0000\cf1\highlight2 
+\par \cf0\highlight0     0:00:09     609.7      0.00       0.0       0.0                           4012032.0000\cf1\highlight2 
+\par \cf0\highlight0     0:00:09     609.7      0.00       0.0       0.0                           4012032.0000\cf1\highlight2 
+\par \cf0\highlight0     0:00:09     609.7      0.00       0.0       0.0                           4012032.0000\cf1\highlight2 
+\par \cf0\highlight0     0:00:09     609.7      0.00       0.0       0.0                           4012032.0000\cf1\highlight2 
+\par \cf0\highlight0     0:00:09     609.7      0.00       0.0       0.0                           4012032.0000\cf1\highlight2 
+\par 
+\par 
+\par \cf0\highlight0   Beginning Leakage Power Optimization  (max_leakage_power 0)\cf1\highlight2 
+\par \cf0\highlight0   ------------------------------------\cf1\highlight2 
+\par 
+\par \cf0\highlight0                                   TOTAL\cf1\highlight2 
+\par \cf0\highlight0    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE\cf1\highlight2 
+\par \cf0\highlight0     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER\cf1\highlight2 
+\par \cf0\highlight0   --------- --------- --------- --------- --------- ------------------------- ---------\cf1\highlight2 
+\par \cf0\highlight0     0:00:09     609.7      0.00       0.0       0.0                           4012032.0000\cf1\highlight2 
+\par \cf0\highlight0   Global Optimization (Phase 31)\cf1\highlight2 
+\par \cf0\highlight0   Global Optimization (Phase 32)\cf1\highlight2 
+\par \cf0\highlight0   Global Optimization (Phase 33)\cf1\highlight2 
+\par \cf0\highlight0   Global Optimization (Phase 34)\cf1\highlight2 
+\par \cf0\highlight0   Global Optimization (Phase 35)\cf1\highlight2 
+\par \cf0\highlight0   Global Optimization (Phase 36)\cf1\highlight2 
+\par \cf0\highlight0   Global Optimization (Phase 37)\cf1\highlight2 
+\par \cf0\highlight0   Global Optimization (Phase 38)\cf1\highlight2 
+\par \cf0\highlight0   Global Optimization (Phase 39)\cf1\highlight2 
+\par \cf0\highlight0   Global Optimization (Phase 40)\cf1\highlight2 
+\par \cf0\highlight0   Global Optimization (Phase 41)\cf1\highlight2 
+\par \cf0\highlight0   Global Optimization (Phase 42)\cf1\highlight2 
+\par \cf0\highlight0   Global Optimization (Phase 43)\cf1\highlight2 
+\par \cf0\highlight0   Global Optimization (Phase 44)\cf1\highlight2 
+\par \cf0\highlight0   Global Optimization (Phase 45)\cf1\highlight2 
+\par \cf0\highlight0     0:00:09     581.2      0.03       0.1       0.0                           2336154.0000\cf1\highlight2 
+\par \cf0\highlight0     0:00:09     586.8      0.00       0.0       0.0                           2588416.2500\cf1\highlight2 
+\par \cf0\highlight0     0:00:09     586.8      0.00       0.0       0.0                           2588416.2500\cf1\highlight2 
+\par \cf0\highlight0     0:00:09     586.8      0.00       0.0       0.0                           2555935.5000\cf1\highlight2 
+\par \cf0\highlight0     0:00:09     586.8      0.00       0.0       0.0                           2555935.5000\cf1\highlight2 
+\par \cf0\highlight0     0:00:10     588.7      0.00       0.0       0.0                           2587045.7500\cf1\highlight2 
+\par \cf0\highlight0     0:00:10     588.7      0.00       0.0       0.0                           2587045.7500\cf1\highlight2 
+\par \cf0\highlight0     0:00:10     588.7      0.00       0.0       0.0                           2587045.7500\cf1\highlight2 
+\par \cf0\highlight0     0:00:10     588.7      0.00       0.0       0.0                           2587045.7500\cf1\highlight2 
+\par \cf0\highlight0     0:00:10     588.7      0.00       0.0       0.0                           2587045.7500\cf1\highlight2 
+\par \cf0\highlight0     0:00:10     588.7      0.00       0.0       0.0                           2587045.7500\cf1\highlight2 
+\par \cf0\highlight0     0:00:10     588.7      0.00       0.0       0.0                           2587045.7500\cf1\highlight2 
+\par \cf0\highlight0     0:00:10     588.7      0.00       0.0       0.0                           2587045.7500\cf1\highlight2 
+\par \cf0\highlight0     0:00:10     588.7      0.00       0.0       0.0                           2587045.7500\cf1\highlight2 
+\par \cf0\highlight0     0:00:10     588.7      0.00       0.0       0.0                           2587045.7500\cf1\highlight2 
+\par \cf0\highlight0     0:00:10     588.7      0.00       0.0       0.0                           2587045.7500\cf1\highlight2 
+\par \cf0\highlight0     0:00:10     588.7      0.00       0.0       0.0                           2587045.7500\cf1\highlight2 
+\par \cf0\highlight0     0:00:10     588.7      0.00       0.0       0.0                           2587045.7500\cf1\highlight2 
+\par \cf0\highlight0     0:00:10     588.7      0.00       0.0       0.0                           2587045.7500\cf1\highlight2 
+\par \cf0\highlight0     0:00:10     588.7      0.00       0.0       0.0                           2587045.7500\cf1\highlight2 
+\par \cf0\highlight0     0:00:10     588.7      0.00       0.0       0.0                           2587045.7500\cf1\highlight2 
+\par \cf0\highlight0     0:00:10     588.7      0.00       0.0       0.0                           2587045.7500\cf1\highlight2 
+\par \cf0\highlight0     0:00:10     614.2      0.00       0.0       0.0                           2999971.5000\cf1\highlight2 
+\par 
+\par \cf0\highlight0                                   TOTAL\cf1\highlight2 
+\par \cf0\highlight0    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE\cf1\highlight2 
+\par \cf0\highlight0     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER\cf1\highlight2 
+\par \cf0\highlight0   --------- --------- --------- --------- --------- ------------------------- ---------\cf1\highlight2 
+\par \cf0\highlight0     0:00:10     614.2      0.00       0.0       0.0                           2999971.5000\cf1\highlight2 
+\par \cf0\highlight0     0:00:10     606.7      0.01       0.0       0.0                           2797711.0000\cf1\highlight2 
+\par \cf0\highlight0     0:00:10     606.7      0.00       0.0       0.0                           2794238.0000\cf1\highlight2 
+\par \cf0\highlight0     0:00:10     606.7      0.00       0.0       0.0                           2794238.0000\cf1\highlight2 
+\par \cf0\highlight0     0:00:10     606.7      0.00       0.0       0.0                           2585432.5000\cf1\highlight2 
+\par 
+\par \cf0\highlight0   Beginning Delay Optimization HSVT Pass\cf1\highlight2 
+\par \cf0\highlight0   --------------------------------------\cf1\highlight2 
+\par \cf0\highlight0     0:00:10     606.7      0.00       0.0       0.0                           2585432.5000\cf1\highlight2 
+\par \cf0\highlight0     0:00:10     606.7      0.00       0.0       0.0                           2585432.5000\cf1\highlight2 
+\par \cf0\highlight0     0:00:10     606.7      0.00       0.0       0.0                           2585432.5000\cf1\highlight2 
+\par \cf0\highlight0     0:00:10     606.7      0.00       0.0       0.0                           2585432.5000\cf1\highlight2 
+\par \cf0\highlight0     0:00:11     604.4      0.00       0.0       0.0                           2574364.0000\cf1\highlight2 
+\par \cf0\highlight0     0:00:11     604.4      0.00       0.0       0.0                           2574364.0000\cf1\highlight2 
+\par \cf0\highlight0     0:00:11     604.4      0.00       0.0       0.0                           2574364.0000\cf1\highlight2 
+\par \cf0\highlight0     0:00:11     604.4      0.00       0.0       0.0                           2574364.0000\cf1\highlight2 
+\par \cf0\highlight0     0:00:11     603.8      0.00       0.0       0.0                           2551646.7500\cf1\highlight2 
+\par \cf0\highlight0 Loading db file '/afs/eos.ncsu.edu/lockers/research/ece/wdavis/tech/nangate/NangateOpenCellLibrary_PDKv1_2_v2008_10/liberty/520/NangateOpenCellLibrary_PDKv1_2_v2008_10_slow_nldm.db'\cf1\highlight2 
+\par 
+\par 
+\par \cf0\highlight0 Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios\cf1\highlight2 
+\par 
+\par 
+\par \cf0\highlight0   Optimization Complete\cf1\highlight2 
+\par \cf0\highlight0   ---------------------\cf1\highlight2 
+\par \cf0\highlight0 Information: State dependent leakage is now switched from off to on.\cf1\highlight2 
+\par \cf0\highlight0 Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)\cf1\highlight2 
+\par \cf0\highlight0 dc_shell> source s\cf1\highlight2 
+\par \cf0\highlight0 script1Project.tcl script2Project.tcl\cf1\highlight2 
+\par \cf0\highlight0 dc_shell> source script2Project.tcl\cf1\highlight2 
+\par 
+\par \cf0\highlight0 ****************************************\cf1\highlight2 
+\par \cf0\highlight0 check_design summary:\cf1\highlight2 
+\par \cf0\highlight0 Version:     P-2019.03-SP1\cf1\highlight2 
+\par \cf0\highlight0 Date:        Mon Nov 15 20:22:36 2021\cf1\highlight2 
+\par \cf0\highlight0 ****************************************\cf1\highlight2 
+\par 
+\par \cf0\highlight0                    Name                                            Total\cf1\highlight2 
+\par \cf0\highlight0 --------------------------------------------------------------------------------\cf1\highlight2 
+\par \cf0\highlight0 Inputs/Outputs                                                      7\cf1\highlight2 
+\par \cf0\highlight0     Unconnected ports (LINT-28)                                     7\cf1\highlight2 
+\par \cf0\highlight0 --------------------------------------------------------------------------------\cf1\highlight2 
+\par 
+\par \cf0\highlight0 Warning: In design 'MyDesign', port 'wmem_dut_read_data[15]' is not connected to any nets. (LINT-28)\cf1\highlight2 
+\par \cf0\highlight0 Warning: In design 'MyDesign', port 'wmem_dut_read_data[14]' is not connected to any nets. (LINT-28)\cf1\highlight2 
+\par \cf0\highlight0 Warning: In design 'MyDesign', port 'wmem_dut_read_data[13]' is not connected to any nets. (LINT-28)\cf1\highlight2 
+\par \cf0\highlight0 Warning: In design 'MyDesign', port 'wmem_dut_read_data[12]' is not connected to any nets. (LINT-28)\cf1\highlight2 
+\par \cf0\highlight0 Warning: In design 'MyDesign', port 'wmem_dut_read_data[11]' is not connected to any nets. (LINT-28)\cf1\highlight2 
+\par \cf0\highlight0 Warning: In design 'MyDesign', port 'wmem_dut_read_data[10]' is not connected to any nets. (LINT-28)\cf1\highlight2 
+\par \cf0\highlight0 Warning: In design 'MyDesign', port 'wmem_dut_read_data[9]' is not connected to any nets. (LINT-28)\cf1\highlight2 
+\par \cf0\highlight0 Writing verilog file '/afs/unity.ncsu.edu/users/a/azheng3/ECE464Project/synth/MyDesign_init.v'.\cf1\highlight2 
+\par \cf0\highlight0 Loading db file '/afs/eos.ncsu.edu/lockers/research/ece/wdavis/tech/nangate/NangateOpenCellLibrary_PDKv1_2_v2008_10/liberty/520/NangateOpenCellLibrary_PDKv1_2_v2008_10_fast_nldm.db'\cf1\highlight2 
+\par 
+\par 
+\par \cf0\highlight0   Loading target library 'NangateOpenCellLibrary_PDKv1_2_v2008_10_fast_nldm'\cf1\highlight2 
+\par \cf0\highlight0   Loading design 'MyDesign'\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell state_reg[1] conflicts with the DFF_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell dut_sram_write_data_reg[3] conflicts with the DFF_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell dut_sram_write_data_reg[2] conflicts with the DFF_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell dut_sram_write_enable_reg conflicts with the DFF_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution1_reg[4] conflicts with the DFF_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution3_reg[4] conflicts with the DFF_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution2_reg[4] conflicts with the DFF_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution1_reg[2] conflicts with the DFF_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution2_reg[2] conflicts with the DFF_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution3_reg[2] conflicts with the DFF_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution1_reg[0] conflicts with the DFF_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution3_reg[0] conflicts with the DFF_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution0_reg[7] conflicts with the DFF_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution0_reg[2] conflicts with the DFF_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution3_reg[7] conflicts with the DFF_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution2_reg[7] conflicts with the DFF_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution0_reg[4] conflicts with the DFF_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution0_reg[0] conflicts with the DFF_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution1_reg[3] conflicts with the DFF_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution2_reg[1] conflicts with the DFF_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell dut_busy_reg conflicts with the DFF_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell dut_sram_write_data_reg[1] conflicts with the DFF_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell dut_sram_write_data_reg[0] conflicts with the DFF_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution1_reg[6] conflicts with the DFF_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell state_reg[0] conflicts with the DFF_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution2_reg[8] conflicts with the DFF_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution3_reg[8] conflicts with the DFF_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution3_reg[5] conflicts with the DFF_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution1_reg[8] conflicts with the DFF_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution0_reg[3] conflicts with the DFF_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution2_reg[0] conflicts with the DFF_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution3_reg[1] conflicts with the DFF_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution3_reg[6] conflicts with the DFF_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution0_reg[8] conflicts with the DFF_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution2_reg[6] conflicts with the DFF_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution0_reg[1] conflicts with the DFF_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution3_reg[3] conflicts with the DFF_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution2_reg[3] conflicts with the DFF_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution1_reg[1] conflicts with the DFF_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution2_reg[5] conflicts with the DFF_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution0_reg[5] conflicts with the DFF_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution1_reg[5] conflicts with the DFF_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution0_reg[6] conflicts with the DFF_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution1_reg[7] conflicts with the DFF_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U143 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U144 conflicts with the INV_X4 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U145 conflicts with the INV_X4 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U146 conflicts with the INV_X4 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U147 conflicts with the INV_X4 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U148 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U149 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U150 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U151 conflicts with the NOR2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U152 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U153 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U154 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U155 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U156 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U157 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U158 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U159 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U160 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U161 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U162 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U163 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U164 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U165 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U166 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U167 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U168 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U169 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U170 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U171 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U172 conflicts with the AOI21_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U173 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U174 conflicts with the AOI21_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U175 conflicts with the OAI211_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U176 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U177 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U178 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U179 conflicts with the OAI211_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U180 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U181 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U182 conflicts with the AOI21_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U183 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U184 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U185 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U186 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U187 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U188 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U189 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U190 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U191 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U192 conflicts with the INV_X4 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U193 conflicts with the XNOR2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U194 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U195 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U196 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U197 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U198 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U199 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U200 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U201 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U202 conflicts with the XNOR2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U203 conflicts with the CLKBUF_X3 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U204 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U205 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U206 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U207 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U208 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U209 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U210 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U211 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U212 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U213 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U214 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U215 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U216 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U217 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U218 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U219 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U220 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U221 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U222 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U223 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U224 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U225 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U226 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U227 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U228 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U229 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U230 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U231 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U232 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U233 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U234 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U235 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U236 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U237 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U238 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U239 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U240 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U241 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U242 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U243 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U244 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U245 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U246 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U247 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U248 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U297 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U298 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U299 conflicts with the XNOR2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U300 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U301 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U302 conflicts with the NAND4_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U303 conflicts with the NAND3_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U304 conflicts with the NAND3_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U305 conflicts with the NAND3_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U306 conflicts with the NAND3_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U307 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U308 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U309 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U310 conflicts with the XNOR2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U311 conflicts with the XNOR2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U312 conflicts with the NOR2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U313 conflicts with the INV_X4 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U314 conflicts with the XNOR2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U315 conflicts with the NAND3_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U316 conflicts with the NAND3_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U317 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U318 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U319 conflicts with the NAND3_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U320 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U321 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U322 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U323 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U324 conflicts with the INV_X4 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U325 conflicts with the XNOR2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U326 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U327 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U328 conflicts with the NOR2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U329 conflicts with the XNOR2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U330 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U331 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U332 conflicts with the INV_X4 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U333 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U334 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U335 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U336 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U337 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U338 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U339 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U340 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U341 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U342 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U343 conflicts with the NAND3_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U344 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U345 conflicts with the INV_X4 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U346 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U347 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U348 conflicts with the XNOR2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U349 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U350 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U351 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U352 conflicts with the XNOR2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U353 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U354 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U355 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U356 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U357 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U358 conflicts with the XNOR2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U359 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U360 conflicts with the NOR2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U361 conflicts with the XNOR2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U362 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U363 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U364 conflicts with the XNOR2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U365 conflicts with the XNOR2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U366 conflicts with the BUF_X4 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U367 conflicts with the XNOR2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U368 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U369 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U370 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U371 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U372 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U373 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U374 conflicts with the XNOR2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U375 conflicts with the NOR2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U376 conflicts with the NOR3_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U377 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U378 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U379 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U380 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U381 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U382 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U383 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U384 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U385 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U386 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U387 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U388 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U389 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U390 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U391 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U392 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U393 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U394 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U395 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U396 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U397 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U398 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U399 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U400 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U401 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U402 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U403 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U404 conflicts with the NOR2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U405 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U406 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U407 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U408 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U409 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U410 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U411 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U412 conflicts with the NOR2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U413 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U414 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U415 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U416 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U417 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U418 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U419 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U420 conflicts with the OAI211_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U421 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U422 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U423 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U424 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U425 conflicts with the NOR2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U426 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U427 conflicts with the NOR2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U428 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U429 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U430 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U431 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U432 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U433 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U434 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U435 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U436 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U437 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U438 conflicts with the NOR2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U439 conflicts with the NAND3_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U440 conflicts with the NOR2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U441 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U442 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U443 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U444 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U445 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U446 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U447 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U448 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U449 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U450 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U451 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U452 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U453 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U454 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U455 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U456 conflicts with the XNOR2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U457 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U458 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U459 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U460 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U461 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U462 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U463 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U464 conflicts with the XNOR2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U465 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U466 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U467 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U468 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U469 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U470 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U471 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U472 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U473 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U474 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U475 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U476 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U477 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U478 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U479 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U480 conflicts with the XNOR2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U481 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U482 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U483 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U484 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U485 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U486 conflicts with the OAI21_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U487 conflicts with the OAI21_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U488 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U489 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U490 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U491 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U492 conflicts with the NAND3_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U493 conflicts with the NOR2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U494 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U495 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U496 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U497 conflicts with the XNOR2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U498 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U499 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U500 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U501 conflicts with the XNOR2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U502 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U503 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U504 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U505 conflicts with the NAND3_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U506 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U507 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U508 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U509 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U510 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U511 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U512 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U513 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U514 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U515 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U516 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U517 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U518 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U519 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U520 conflicts with the XNOR2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U521 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U522 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U523 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U524 conflicts with the XNOR2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U525 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U526 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U527 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U528 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U529 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U530 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U531 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U532 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U533 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U534 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U535 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U536 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U537 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U538 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U539 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U540 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U541 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U542 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U543 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U544 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U545 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U546 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U547 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U548 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U549 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U550 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U551 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U552 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U553 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U554 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U555 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U556 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U557 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U558 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U559 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U560 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U561 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U562 conflicts with the OAI21_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U563 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U564 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U565 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U566 conflicts with the NAND3_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U567 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U568 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U569 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U570 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U571 conflicts with the XNOR2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U572 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U573 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U574 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U575 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U576 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U577 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U578 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U579 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U580 conflicts with the AND2_X4 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U581 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U582 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U583 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U584 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U585 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U586 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U587 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U588 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U589 conflicts with the NAND3_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U590 conflicts with the XNOR2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U591 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U592 conflicts with the NOR2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U593 conflicts with the NAND3_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U594 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U595 conflicts with the NAND3_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U596 conflicts with the NAND3_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U597 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U598 conflicts with the NOR2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U599 conflicts with the XNOR2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U600 conflicts with the XNOR2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U601 conflicts with the NAND3_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U602 conflicts with the NOR2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U603 conflicts with the XNOR2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U604 conflicts with the XNOR2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U605 conflicts with the XNOR2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U606 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U607 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U608 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U609 conflicts with the NAND3_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U610 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U611 conflicts with the XNOR2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U612 conflicts with the NOR2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U613 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U614 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U615 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U616 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U617 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U618 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U619 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U620 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U621 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U622 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U623 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U624 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U625 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U626 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U627 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U628 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U629 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U630 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U631 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U632 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U633 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U634 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U635 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U636 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U637 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U638 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U639 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U640 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U641 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U642 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U643 conflicts with the NAND3_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U644 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U645 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U646 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U647 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U648 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U649 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U650 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U651 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U652 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U653 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U654 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U655 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U656 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U657 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U658 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U659 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U660 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U661 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U662 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U663 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U664 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U665 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U666 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U667 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U668 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U669 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: There are conflicts between cells in libraries NangateOpenCellLibrary_PDKv1_2_v2008_10_fast_nldm:NangateOpenCellLibrary_PDKv1_2_v2008_10_fast_nldm.db (/afs/eos.ncsu.edu/lockers/research/ece/wdavis/tech/nangate/NangateOpenCellLibrary_PDKv1_2_v2008_10/liberty/520) and NangateOpenCellLibrary_PDKv1_2_v2008_10_slow_nldm:NangateOpenCellLibrary_PDKv1_2_v2008_10_slow_nldm.db (/afs/eos.ncsu.edu/lockers/research/ece/wdavis/tech/nangate/NangateOpenCellLibrary_PDKv1_2_v2008_10/liberty/520). (OPT-187)\cf1\highlight2 
+\par \cf0\highlight0 Information: Updating design information... (UID-85)\cf1\highlight2 
+\par \cf0\highlight0   Translating Design 'MyDesign'\cf1\highlight2 
+\par \cf0\highlight0     from the technology 'NangateOpenCellLibrary_PDKv1_2_v2008_10_fast_nldm' (cmos)\cf1\highlight2 
+\par \cf0\highlight0     to the technology 'NangateOpenCellLibrary_PDKv1_2_v2008_10_fast_nldm' (cmos)\cf1\highlight2 
+\par 
+\par \cf0\highlight0 Information: Performing power optimization. (PWR-850)\cf1\highlight2 
+\par 
+\par \cf0\highlight0 Information: There are 7 potential problems in your design. Please run 'check_design' for more information. (LINT-99)\cf1\highlight2 
+\par 
+\par 
+\par \cf0\highlight0 Information: State dependent leakage is now switched from on to off.\cf1\highlight2 
+\par 
+\par \cf0\highlight0   Beginning Pass 1 Mapping  (Incremental)\cf1\highlight2 
+\par \cf0\highlight0   ------------------------\cf1\highlight2 
+\par 
+\par \cf0\highlight0   Updating timing information\cf1\highlight2 
+\par \cf0\highlight0 Information: Updating design information... (UID-85)\cf1\highlight2 
+\par \cf0\highlight0 Loading db file '/afs/eos.ncsu.edu/lockers/research/ece/wdavis/tech/nangate/NangateOpenCellLibrary_PDKv1_2_v2008_10/liberty/520/NangateOpenCellLibrary_PDKv1_2_v2008_10_slow_nldm.db'\cf1\highlight2 
+\par \cf0\highlight0 Loading db file '/afs/eos.ncsu.edu/lockers/research/ece/wdavis/tech/nangate/NangateOpenCellLibrary_PDKv1_2_v2008_10/liberty/520/NangateOpenCellLibrary_PDKv1_2_v2008_10_fast_nldm.db'\cf1\highlight2 
+\par 
+\par 
+\par \cf0\highlight0 Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios\cf1\highlight2 
+\par 
+\par 
+\par \cf0\highlight0   Optimization Complete\cf1\highlight2 
+\par \cf0\highlight0   ---------------------\cf1\highlight2 
+\par \cf0\highlight0 Information: State dependent leakage is now switched from off to on.\cf1\highlight2 
+\par \cf0\highlight0 Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)\cf1\highlight2 
+\par \cf0\highlight0 Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)\cf1\highlight2 
+\par \cf0\highlight0 Information: Writing timing information to file '/afs/unity.ncsu.edu/users/a/azheng3/ECE464Project/synth/MyDesign_min.sdf'. (WT-3)\cf1\highlight2 
+\par 
+\par 
+\par \cf0\highlight0   Loading target library 'NangateOpenCellLibrary_PDKv1_2_v2008_10_slow_nldm'\cf1\highlight2 
+\par \cf0\highlight0   Loading design 'MyDesign'\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell state_reg[1] conflicts with the DFF_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell dut_sram_write_data_reg[3] conflicts with the DFF_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell dut_sram_write_data_reg[2] conflicts with the DFF_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell dut_sram_write_enable_reg conflicts with the DFF_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution1_reg[4] conflicts with the DFF_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution3_reg[4] conflicts with the DFF_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution2_reg[4] conflicts with the DFF_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution1_reg[2] conflicts with the DFF_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution2_reg[2] conflicts with the DFF_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution3_reg[2] conflicts with the DFF_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution1_reg[0] conflicts with the DFF_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution3_reg[0] conflicts with the DFF_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution0_reg[7] conflicts with the DFF_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution0_reg[2] conflicts with the DFF_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution3_reg[7] conflicts with the DFF_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution2_reg[7] conflicts with the DFF_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution0_reg[4] conflicts with the DFF_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution0_reg[0] conflicts with the DFF_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution1_reg[3] conflicts with the DFF_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution2_reg[1] conflicts with the DFF_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell dut_busy_reg conflicts with the DFF_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell dut_sram_write_data_reg[1] conflicts with the DFF_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell dut_sram_write_data_reg[0] conflicts with the DFF_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution1_reg[6] conflicts with the DFF_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell state_reg[0] conflicts with the DFF_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution2_reg[8] conflicts with the DFF_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution3_reg[8] conflicts with the DFF_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution3_reg[5] conflicts with the DFF_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution1_reg[8] conflicts with the DFF_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution0_reg[3] conflicts with the DFF_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution2_reg[0] conflicts with the DFF_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution3_reg[1] conflicts with the DFF_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution3_reg[6] conflicts with the DFF_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution0_reg[8] conflicts with the DFF_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution2_reg[6] conflicts with the DFF_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution0_reg[1] conflicts with the DFF_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution3_reg[3] conflicts with the DFF_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution2_reg[3] conflicts with the DFF_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution1_reg[1] conflicts with the DFF_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution2_reg[5] conflicts with the DFF_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution0_reg[5] conflicts with the DFF_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution1_reg[5] conflicts with the DFF_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution0_reg[6] conflicts with the DFF_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell convolution1_reg[7] conflicts with the DFF_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U143 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U144 conflicts with the INV_X4 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U145 conflicts with the INV_X4 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U146 conflicts with the INV_X4 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U147 conflicts with the INV_X4 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U148 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U149 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U150 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U151 conflicts with the NOR2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U152 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U153 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U154 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U155 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U156 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U157 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U158 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U159 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U160 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U161 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U162 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U163 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U164 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U165 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U166 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U167 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U168 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U169 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U170 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U171 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U172 conflicts with the AOI21_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U173 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U174 conflicts with the AOI21_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U175 conflicts with the OAI211_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U176 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U177 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U178 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U179 conflicts with the OAI211_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U180 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U181 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U182 conflicts with the AOI21_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U183 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U184 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U185 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U186 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U187 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U188 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U189 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U190 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U191 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U192 conflicts with the INV_X4 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U193 conflicts with the XNOR2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U194 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U195 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U196 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U197 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U198 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U199 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U200 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U201 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U202 conflicts with the XNOR2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U203 conflicts with the CLKBUF_X3 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U204 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U205 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U206 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U207 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U208 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U209 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U210 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U211 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U212 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U213 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U214 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U215 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U216 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U217 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U218 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U219 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U220 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U221 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U222 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U223 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U224 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U225 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U226 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U227 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U228 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U229 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U230 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U231 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U232 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U233 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U234 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U235 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U236 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U237 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U238 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U239 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U240 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U241 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U242 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U243 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U244 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U245 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U246 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U247 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U248 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U297 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U298 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U299 conflicts with the XNOR2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U300 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U301 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U302 conflicts with the NAND4_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U303 conflicts with the NAND3_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U304 conflicts with the NAND3_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U305 conflicts with the NAND3_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U306 conflicts with the NAND3_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U307 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U308 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U309 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U310 conflicts with the XNOR2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U311 conflicts with the XNOR2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U312 conflicts with the NOR2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U313 conflicts with the INV_X4 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U314 conflicts with the XNOR2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U315 conflicts with the NAND3_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U316 conflicts with the NAND3_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U317 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U318 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U319 conflicts with the NAND3_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U320 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U321 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U322 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U323 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U324 conflicts with the INV_X4 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U325 conflicts with the XNOR2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U326 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U327 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U328 conflicts with the NOR2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U329 conflicts with the XNOR2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U330 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U331 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U332 conflicts with the INV_X4 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U333 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U334 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U335 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U336 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U337 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U338 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U339 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U340 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U341 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U342 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U343 conflicts with the NAND3_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U344 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U345 conflicts with the INV_X4 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U346 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U347 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U348 conflicts with the XNOR2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U349 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U350 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U351 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U352 conflicts with the XNOR2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U353 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U354 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U355 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U356 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U357 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U358 conflicts with the XNOR2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U359 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U360 conflicts with the NOR2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U361 conflicts with the XNOR2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U362 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U363 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U364 conflicts with the XNOR2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U365 conflicts with the XNOR2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U366 conflicts with the BUF_X4 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U367 conflicts with the XNOR2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U368 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U369 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U370 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U371 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U372 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U373 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U374 conflicts with the XNOR2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U375 conflicts with the NOR2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U376 conflicts with the NOR3_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U377 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U378 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U379 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U380 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U381 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U382 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U383 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U384 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U385 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U386 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U387 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U388 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U389 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U390 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U391 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U392 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U393 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U394 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U395 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U396 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U397 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U398 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U399 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U400 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U401 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U402 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U403 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U404 conflicts with the NOR2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U405 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U406 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U407 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U408 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U409 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U410 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U411 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U412 conflicts with the NOR2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U413 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U414 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U415 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U416 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U417 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U418 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U419 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U420 conflicts with the OAI211_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U421 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U422 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U423 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U424 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U425 conflicts with the NOR2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U426 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U427 conflicts with the NOR2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U428 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U429 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U430 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U431 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U432 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U433 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U434 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U435 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U436 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U437 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U438 conflicts with the NOR2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U439 conflicts with the NAND3_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U440 conflicts with the NOR2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U441 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U442 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U443 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U444 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U445 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U446 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U447 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U448 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U449 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U450 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U451 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U452 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U453 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U454 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U455 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U456 conflicts with the XNOR2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U457 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U458 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U459 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U460 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U461 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U462 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U463 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U464 conflicts with the XNOR2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U465 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U466 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U467 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U468 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U469 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U470 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U471 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U472 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U473 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U474 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U475 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U476 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U477 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U478 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U479 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U480 conflicts with the XNOR2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U481 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U482 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U483 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U484 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U485 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U486 conflicts with the OAI21_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U487 conflicts with the OAI21_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U488 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U489 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U490 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U491 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U492 conflicts with the NAND3_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U493 conflicts with the NOR2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U494 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U495 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U496 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U497 conflicts with the XNOR2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U498 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U499 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U500 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U501 conflicts with the XNOR2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U502 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U503 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U504 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U505 conflicts with the NAND3_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U506 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U507 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U508 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U509 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U510 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U511 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U512 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U513 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U514 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U515 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U516 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U517 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U518 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U519 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U520 conflicts with the XNOR2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U521 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U522 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U523 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U524 conflicts with the XNOR2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U525 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U526 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U527 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U528 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U529 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U530 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U531 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U532 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U533 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U534 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U535 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U536 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U537 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U538 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U539 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U540 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U541 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U542 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U543 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U544 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U545 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U546 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U547 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U548 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U549 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U550 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U551 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U552 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U553 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U554 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U555 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U556 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U557 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U558 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U559 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U560 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U561 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U562 conflicts with the OAI21_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U563 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U564 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U565 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U566 conflicts with the NAND3_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U567 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U568 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U569 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U570 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U571 conflicts with the XNOR2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U572 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U573 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U574 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U575 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U576 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U577 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U578 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U579 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U580 conflicts with the AND2_X4 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U581 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U582 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U583 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U584 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U585 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U586 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U587 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U588 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U589 conflicts with the NAND3_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U590 conflicts with the XNOR2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U591 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U592 conflicts with the NOR2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U593 conflicts with the NAND3_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U594 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U595 conflicts with the NAND3_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U596 conflicts with the NAND3_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U597 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U598 conflicts with the NOR2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U599 conflicts with the XNOR2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U600 conflicts with the XNOR2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U601 conflicts with the NAND3_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U602 conflicts with the NOR2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U603 conflicts with the XNOR2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U604 conflicts with the XNOR2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U605 conflicts with the XNOR2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U606 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U607 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U608 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U609 conflicts with the NAND3_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U610 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U611 conflicts with the XNOR2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U612 conflicts with the NOR2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U613 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U614 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U615 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U616 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U617 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U618 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U619 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U620 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U621 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U622 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U623 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U624 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U625 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U626 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U627 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U628 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U629 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U630 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U631 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U632 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U633 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U634 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U635 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U636 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U637 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U638 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U639 conflicts with the OAI22_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U640 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U641 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U642 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U643 conflicts with the NAND3_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U644 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U645 conflicts with the INV_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U646 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U647 conflicts with the INV_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U648 conflicts with the NAND2_X2 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U649 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U650 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U651 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U652 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U653 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U654 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U655 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U656 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U657 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U658 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U659 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U660 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U661 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U662 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U663 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U664 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U665 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U666 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U667 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U668 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Cell U669 conflicts with the NAND2_X1 in the target library. (OPT-106)\cf1\highlight2 
+\par \cf0\highlight0 Warning: There are conflicts between cells in libraries NangateOpenCellLibrary_PDKv1_2_v2008_10_slow_nldm:NangateOpenCellLibrary_PDKv1_2_v2008_10_slow_nldm.db (/afs/eos.ncsu.edu/lockers/research/ece/wdavis/tech/nangate/NangateOpenCellLibrary_PDKv1_2_v2008_10/liberty/520) and NangateOpenCellLibrary_PDKv1_2_v2008_10_fast_nldm:NangateOpenCellLibrary_PDKv1_2_v2008_10_fast_nldm.db (/afs/eos.ncsu.edu/lockers/research/ece/wdavis/tech/nangate/NangateOpenCellLibrary_PDKv1_2_v2008_10/liberty/520). (OPT-187)\cf1\highlight2 
+\par \cf0\highlight0 Information: Updating design information... (UID-85)\cf1\highlight2 
+\par \cf0\highlight0   Translating Design 'MyDesign'\cf1\highlight2 
+\par \cf0\highlight0     from the technology 'NangateOpenCellLibrary_PDKv1_2_v2008_10_slow_nldm' (cmos)\cf1\highlight2 
+\par \cf0\highlight0     to the technology 'NangateOpenCellLibrary_PDKv1_2_v2008_10_slow_nldm' (cmos)\cf1\highlight2 
+\par 
+\par \cf0\highlight0 Writing verilog file '/afs/unity.ncsu.edu/users/a/azheng3/ECE464Project/synth/MyDesign_final.v'.\cf1\highlight2 
+\par \cf0\highlight0 Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)\cf1\highlight2 
+\par \cf0\highlight0 Information: Writing timing information to file '/afs/unity.ncsu.edu/users/a/azheng3/ECE464Project/synth/MyDesign_max.sdf'. (WT-3)\cf1\highlight2 
+\par \cf0\highlight0 1\cf1\highlight2 
+\par \cf0\highlight0 dc_shell> report_tim\cf1\highlight2 
+\par \cf0\highlight0 report_timing              report_timing_derate       report_timing_requirements\cf1\highlight2 
+\par \cf0\highlight0 dc_shell> report_timing\cf1\highlight2 
+\par 
+\par \cf0\highlight0 ****************************************\cf1\highlight2 
+\par \cf0\highlight0 Report : timing\cf1\highlight2 
+\par \cf0\highlight0         -path full\cf1\highlight2 
+\par \cf0\highlight0         -delay max\cf1\highlight2 
+\par \cf0\highlight0         -max_paths 1\cf1\highlight2 
+\par \cf0\highlight0 Design : MyDesign\cf1\highlight2 
+\par \cf0\highlight0 Version: P-2019.03-SP1\cf1\highlight2 
+\par \cf0\highlight0 Date   : Mon Nov 15 20:22:46 2021\cf1\highlight2 
+\par \cf0\highlight0 ****************************************\cf1\highlight2 
+\par 
+\par \cf0\highlight0 Operating Conditions: slow   Library: NangateOpenCellLibrary_PDKv1_2_v2008_10_slow_nldm\cf1\highlight2 
+\par \cf0\highlight0 Wire Load Model Mode: top\cf1\highlight2 
+\par 
+\par \cf0\highlight0   Startpoint: convolution3_reg_4_\cf1\highlight2 
+\par \cf0\highlight0               (rising edge-triggered flip-flop clocked by clk)\cf1\highlight2 
+\par \cf0\highlight0   Endpoint: dut_sram_write_data_reg_3_\cf1\highlight2 
+\par \cf0\highlight0             (rising edge-triggered flip-flop clocked by clk)\cf1\highlight2 
+\par \cf0\highlight0   Path Group: clk\cf1\highlight2 
+\par \cf0\highlight0   Path Type: max\cf1\highlight2 
+\par 
+\par \cf0\highlight0   Point                                                   Incr       Path\cf1\highlight2 
+\par \cf0\highlight0   --------------------------------------------------------------------------\cf1\highlight2 
+\par \cf0\highlight0   clock clk (rise edge)                                 0.0000     0.0000\cf1\highlight2 
+\par \cf0\highlight0   clock network delay (ideal)                           0.0000     0.0000\cf1\highlight2 
+\par \cf0\highlight0   convolution3_reg_4_/CK (DFF_X2)                       0.0000     0.0000 r\cf1\highlight2 
+\par \cf0\highlight0   convolution3_reg_4_/QN (DFF_X2)                       0.3320     0.3320 f\cf1\highlight2 
+\par \cf0\highlight0   U332/ZN (INV_X4)                                      0.0911     0.4231 r\cf1\highlight2 
+\par \cf0\highlight0   U645/ZN (INV_X2)                                      0.0405     0.4637 f\cf1\highlight2 
+\par \cf0\highlight0   U335/ZN (NAND2_X2)                                    0.0764     0.5400 r\cf1\highlight2 
+\par \cf0\highlight0   U333/ZN (NAND2_X2)                                    0.0592     0.5993 f\cf1\highlight2 
+\par \cf0\highlight0   U331/ZN (NAND2_X2)                                    0.1055     0.7048 r\cf1\highlight2 
+\par \cf0\highlight0   U181/ZN (INV_X1)                                      0.0527     0.7575 f\cf1\highlight2 
+\par \cf0\highlight0   U397/ZN (NAND2_X1)                                    0.1667     0.9242 r\cf1\highlight2 
+\par \cf0\highlight0   U601/ZN (NAND3_X2)                                    0.0925     1.0166 f\cf1\highlight2 
+\par \cf0\highlight0   U338/ZN (NAND2_X2)                                    0.1065     1.1231 r\cf1\highlight2 
+\par \cf0\highlight0   U173/ZN (NAND2_X1)                                    0.0800     1.2031 f\cf1\highlight2 
+\par \cf0\highlight0   U437/ZN (INV_X1)                                      0.0792     1.2823 r\cf1\highlight2 
+\par \cf0\highlight0   U436/ZN (NAND2_X1)                                    0.0563     1.3386 f\cf1\highlight2 
+\par \cf0\highlight0   U435/ZN (NAND2_X1)                                    0.1168     1.4554 r\cf1\highlight2 
+\par \cf0\highlight0   U592/ZN (NOR2_X2)                                     0.0782     1.5336 f\cf1\highlight2 
+\par \cf0\highlight0   U591/ZN (NAND2_X2)                                    0.1191     1.6527 r\cf1\highlight2 
+\par \cf0\highlight0   U648/ZN (NAND2_X2)                                    0.0586     1.7113 f\cf1\highlight2 
+\par \cf0\highlight0   dut_sram_write_data_reg_3_/D (DFF_X2)                 0.0000     1.7113 f\cf1\highlight2 
+\par \cf0\highlight0   data arrival time                                                1.7113\cf1\highlight2 
+\par 
+\par \cf0\highlight0   clock clk (rise edge)                                 2.0600     2.0600\cf1\highlight2 
+\par \cf0\highlight0   clock network delay (ideal)                           0.0000     2.0600\cf1\highlight2 
+\par \cf0\highlight0   clock uncertainty                                    -0.0500     2.0100\cf1\highlight2 
+\par \cf0\highlight0   dut_sram_write_data_reg_3_/CK (DFF_X2)                0.0000     2.0100 r\cf1\highlight2 
+\par \cf0\highlight0   library setup time                                   -0.2977     1.7123\cf1\highlight2 
+\par \cf0\highlight0   data required time                                               1.7123\cf1\highlight2 
+\par \cf0\highlight0   --------------------------------------------------------------------------\cf1\highlight2 
+\par \cf0\highlight0   data required time                                               1.7123\cf1\highlight2 
+\par \cf0\highlight0   data arrival time                                               -1.7113\cf1\highlight2 
+\par \cf0\highlight0   --------------------------------------------------------------------------\cf1\highlight2 
+\par \cf0\highlight0   slack (MET)                                                      0.0010\cf1\highlight2 
+\par 
+\par 
+\par \cf0\highlight0 1\cf1\highlight2 
+\par \cf0\highlight0 dc_shell> report_area\cf1\highlight2 
+\par 
+\par \cf0\highlight0 ****************************************\cf1\highlight2 
+\par \cf0\highlight0 Report : area\cf1\highlight2 
+\par \cf0\highlight0 Design : MyDesign\cf1\highlight2 
+\par \cf0\highlight0 Version: P-2019.03-SP1\cf1\highlight2 
+\par \cf0\highlight0 Date   : Mon Nov 15 20:22:54 2021\cf1\highlight2 
+\par \cf0\highlight0 ****************************************\cf1\highlight2 
+\par 
+\par \cf0\highlight0 Library(s) Used:\cf1\highlight2 
+\par 
+\par \cf0\highlight0     NangateOpenCellLibrary_PDKv1_2_v2008_10_slow_nldm (File: /afs/eos.ncsu.edu/lockers/research/ece/wdavis/tech/nangate/NangateOpenCellLibrary_PDKv1_2_v2008_10/liberty/520/NangateOpenCellLibrary_PDKv1_2_v2008_10_slow_nldm.db)\cf1\highlight2 
+\par 
+\par \cf0\highlight0 Number of ports:                           89\cf1\highlight2 
+\par \cf0\highlight0 Number of nets:                           629\cf1\highlight2 
+\par \cf0\highlight0 Number of cells:                          571\cf1\highlight2 
+\par \cf0\highlight0 Number of combinational cells:            479\cf1\highlight2 
+\par \cf0\highlight0 Number of sequential cells:                44\cf1\highlight2 
+\par \cf0\highlight0 Number of macros/black boxes:               0\cf1\highlight2 
+\par \cf0\highlight0 Number of buf/inv:                        143\cf1\highlight2 
+\par \cf0\highlight0 Number of references:                      23\cf1\highlight2 
+\par 
+\par \cf0\highlight0 Combinational area:                393.147996\cf1\highlight2 
+\par \cf0\highlight0 Buf/Inv area:                       76.608001\cf1\highlight2 
+\par \cf0\highlight0 Noncombinational area:             210.672005\cf1\highlight2 
+\par \cf0\highlight0 Macro/Black Box area:                0.000000\cf1\highlight2 
+\par \cf0\highlight0 Net Interconnect area:      undefined  (No wire load specified)\cf1\highlight2 
+\par 
+\par \cf0\highlight0 Total cell area:                   603.820000\cf1\highlight2 
+\par \cf0\highlight0 Total area:                 undefined\cf1\highlight2 
+\par \cf0\highlight0 1\cf1\highlight2 
+\par \cf0\highlight0 dc_shell> report_power\cf1\highlight2 
+\par \cf0\highlight0 report_power             report_power_domain      report_power_pin_info\cf1\highlight2 
+\par \cf0\highlight0 report_power_calculation report_power_gating      report_power_switch\cf1\highlight2 
+\par \cf0\highlight0 dc_shell> report_power\cf1\highlight2 
+\par \cf0\highlight0 Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Design has unannotated primary inputs. (PWR-414)\cf1\highlight2 
+\par \cf0\highlight0 Warning: Design has unannotated sequential cell outputs. (PWR-415)\cf1\highlight2 
+\par 
+\par \cf0\highlight0 ****************************************\cf1\highlight2 
+\par \cf0\highlight0 Report : power\cf1\highlight2 
+\par \cf0\highlight0         -analysis_effort low\cf1\highlight2 
+\par \cf0\highlight0 Design : MyDesign\cf1\highlight2 
+\par \cf0\highlight0 Version: P-2019.03-SP1\cf1\highlight2 
+\par \cf0\highlight0 Date   : Mon Nov 15 20:22:58 2021\cf1\highlight2 
+\par \cf0\highlight0 ****************************************\cf1\highlight2 
+\par 
+\par 
+\par \cf0\highlight0 Library(s) Used:\cf1\highlight2 
+\par 
+\par \cf0\highlight0     NangateOpenCellLibrary_PDKv1_2_v2008_10_slow_nldm (File: /afs/eos.ncsu.edu/lockers/research/ece/wdavis/tech/nangate/NangateOpenCellLibrary_PDKv1_2_v2008_10/liberty/520/NangateOpenCellLibrary_PDKv1_2_v2008_10_slow_nldm.db)\cf1\highlight2 
+\par 
+\par 
+\par \cf0\highlight0 Operating Conditions: slow   Library: NangateOpenCellLibrary_PDKv1_2_v2008_10_slow_nldm\cf1\highlight2 
+\par \cf0\highlight0 Wire Load Model Mode: top\cf1\highlight2 
+\par 
+\par 
+\par \cf0\highlight0 Global Operating Voltage = 0.95\cf1\highlight2 
+\par \cf0\highlight0 Power-specific unit information :\cf1\highlight2 
+\par \cf0\highlight0     Voltage Units = 1V\cf1\highlight2 
+\par \cf0\highlight0     Capacitance Units = 1.000000pf\cf1\highlight2 
+\par \cf0\highlight0     Time Units = 1ns\cf1\highlight2 
+\par \cf0\highlight0     Dynamic Power Units = 1mW    (derived from V,C,T units)\cf1\highlight2 
+\par \cf0\highlight0     Leakage Power Units = 1pW\cf1\highlight2 
+\par 
+\par 
+\par \cf0\highlight0   Cell Internal Power  =  59.1135 uW   (83%)\cf1\highlight2 
+\par \cf0\highlight0   Net Switching Power  =  11.8655 uW   (17%)\cf1\highlight2 
+\par \cf0\highlight0                          ---------\cf1\highlight2 
+\par \cf0\highlight0 Total Dynamic Power    =  70.9789 uW  (100%)\cf1\highlight2 
+\par 
+\par \cf0\highlight0 Cell Leakage Power     =   2.5543 uW\cf1\highlight2 
+\par 
+\par 
+\par \cf0\highlight0                  Internal         Switching           Leakage            Total\cf1\highlight2 
+\par \cf0\highlight0 Power Group      Power            Power               Power              Power   (   %    )  Attrs\cf1\highlight2 
+\par \cf0\highlight0 --------------------------------------------------------------------------------------------------\cf1\highlight2 
+\par \cf0\highlight0 io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)\cf1\highlight2 
+\par \cf0\highlight0 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)\cf1\highlight2 
+\par \cf0\highlight0 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)\cf1\highlight2 
+\par \cf0\highlight0 clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)\cf1\highlight2 
+\par \cf0\highlight0 register       4.3479e-02        2.5823e-03        3.4836e+05        4.6410e-02  (  63.11%)\cf1\highlight2 
+\par \cf0\highlight0 sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)\cf1\highlight2 
+\par \cf0\highlight0 combinational  1.5635e-02        9.2832e-03        2.2059e+06        2.7124e-02  (  36.89%)\cf1\highlight2 
+\par \cf0\highlight0 --------------------------------------------------------------------------------------------------\cf1\highlight2 
+\par \cf0\highlight0 Total          5.9113e-02 mW     1.1865e-02 mW     2.5543e+06 pW     7.3533e-02 mW\cf1\highlight2 
+\par \cf0\highlight0 1\cf1\highlight2 
+\par \cf0\highlight0 dc_shell>\cf1\highlight2 
+\par \pard\cf0\highlight0\f1 
+\par }
+ 

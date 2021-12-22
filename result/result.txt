@@ -1,0 +1,5 @@
+Write a result.txt file, report your performance:
+area = 603.82
+Number of cycles = 4
+clock period = 2.06
+performance = 4975.48

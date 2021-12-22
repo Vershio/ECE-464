@@ -1,0 +1,83 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/zheng/Documents/ECE 464/Project Files/azheng3/v
+vMyDesign
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+!s110 1637018816
+!i10b 1
+!s100 @h1Un@>V>[E0]`gl0WEWJ0
+I`?Z70JYOzaz2c:Q=1z^hE2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+!s105 MyDesign_sv_unit
+S1
+R0
+w1637018799
+8C:/Users/zheng/Documents/ECE 464/Project Files/azheng3/v/MyDesign.sv
+FC:/Users/zheng/Documents/ECE 464/Project Files/azheng3/v/MyDesign.sv
+L0 8
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1637018816.000000
+!s107 C:/Users/zheng/Documents/ECE 464/Project Files/azheng3/v/MyDesign.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/zheng/Documents/ECE 464/Project Files/azheng3/v/MyDesign.sv|
+!i113 1
+Z4 o-work work
+Z5 tCvgOpt 0
+n@my@design
+vsram
+R1
+Z6 !s110 1637018819
+!i10b 1
+!s100 dWHaFeNoHGgkQGN2EQ`_e1
+I]Bon5k;2d5mUZa>KVZgAE1
+R2
+Z7 !s105 testbench_464_sv_unit
+S1
+R0
+w1635898941
+8sram.sv
+Fsram.sv
+L0 4
+R3
+r1
+!s85 0
+31
+Z8 !s108 1637018819.000000
+Z9 !s107 sram.sv|C:/Users/zheng/Documents/ECE 464/Project Files/azheng3/v/testbench_464.sv|
+Z10 !s90 -reportprogress|300|-work|work|C:/Users/zheng/Documents/ECE 464/Project Files/azheng3/v/testbench_464.sv|
+!i113 1
+R4
+R5
+vtb_top
+R1
+R6
+!i10b 1
+!s100 Ld`CPK:k]fBPIzoNTON=E2
+I;O@R61^EYmYLYg?gK;Z2R1
+R2
+R7
+S1
+R0
+w1637018741
+8C:/Users/zheng/Documents/ECE 464/Project Files/azheng3/v/testbench_464.sv
+FC:/Users/zheng/Documents/ECE 464/Project Files/azheng3/v/testbench_464.sv
+L0 2
+R3
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R4
+R5
